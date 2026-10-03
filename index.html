@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star Trade — The Athlete Intelligence Engine</title>
+<meta name="description" content="Star Trade is a sports intelligence platform: explainable athlete valuations, a live community, and a paper-trading exchange where the market discovers price.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top">
+    <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5l3.6 8.2 8.9 1-6.6 6 1.8 8.8L16 22l-7.7 4.5 1.8-8.8-6.6-6 8.9-1z" fill="none" stroke="url(#lg)" stroke-width="2" stroke-linejoin="round"/><path d="M7 24l6-6 4 3 8-9" fill="none" stroke="#FF7A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#FFB066"/><stop offset="1" stop-color="#FF7A1A"/></linearGradient></defs></svg>
+    <span>STAR&nbsp;TRADE</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#loop">The Loop</a>
+    <a href="#engine">Engine</a>
+    <a href="#product">Product</a>
+    <a href="#roadmap">Roadmap</a>
+  </nav>
+  <div class="nav-right">
+    <span class="paper-badge">PAPER TRADING</span>
+    <a class="btn btn-small" href="mailto:hello@startrade.app?subject=Star%20Trade%20demo%20request">Request the demo</a>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="hero-glow hero-glow-a"></div>
+  <div class="hero-glow hero-glow-b"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow reveal">Sports intelligence &amp; athlete markets</div>
+      <h1 class="reveal">The athlete<br>intelligence <span class="accent">engine.</span></h1>
+      <p class="lede reveal">Star Trade explains what an athlete is worth — a transparent, time-versioned fair value — then lets a paper-trading market argue with it. Sports first. Intelligence second. Market third.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn" href="#loop">See how it works</a>
+        <a class="btn btn-ghost" href="mailto:hello@startrade.app?subject=Star%20Trade%20demo%20request">Request the demo</a>
+      </div>
+      <div class="hero-proof reveal">
+        <span><strong data-count="6572">0</strong> real games ingested</span>
+        <span class="dot"></span>
+        <span><strong data-count="32907">0</strong> stat lines</span>
+        <span class="dot"></span>
+        <span><strong data-count="5">0</strong> seasons</span>
+      </div>
+    </div>
+
+    <!-- Product mock: athlete intelligence card + pair chip -->
+    <div class="hero-mock reveal">
+      <div class="mock-card">
+        <div class="mock-head">
+          <div class="mock-avatar">AT</div>
+          <div>
+            <div class="mock-name">Ausar Thompson</div>
+            <div class="mock-sub">Detroit Pistons · Wing · <span class="live-dot"></span>Active</div>
+          </div>
+          <div class="mock-temp hot" title="Community temperature">▲ Hot</div>
+        </div>
+        <div class="mock-story">"Point-of-attack menace. The leap is showing up in the defensive tape."</div>
+        <div class="mock-rows">
+          <div class="mock-row"><span>Model fair value</span><strong class="mono">$101.77</strong></div>
+          <div class="mock-row"><span>Market price</span><strong class="mono" id="tick">$78.98</strong></div>
+          <div class="mock-row"><span>Divergence</span><strong class="mono up">+28.9% undervalued</strong></div>
+          <div class="mock-row"><span>Confidence</span><span class="conf"><i style="width:72%"></i></span><em>High</em></div>
+        </div>
+        <div class="mock-note">The gap is the signal. The crowd debates it; the model shows its work.</div>
+      </div>
+      <div class="mock-pair">
+        <div class="pair-sides"><span>AMEN</span><em>vs</em><span>AUSAR</span></div>
+        <div class="pair-price mono">174.55</div>
+        <div class="pair-fair">fair ratio 174.11 · market +0.3% rich</div>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Sports first</span><i>★</i><span>Intelligence second</span><i>★</i><span>Market third</span><i>★</i><span>Explainable by construction</span><i>★</i><span>Point-in-time integrity</span><i>★</i><span>Paper trading only</span><i>★</i>
+      <span>Sports first</span><i>★</i><span>Intelligence second</span><i>★</i><span>Market third</span><i>★</i><span>Explainable by construction</span><i>★</i><span>Point-in-time integrity</span><i>★</i><span>Paper trading only</span><i>★</i>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TWO TRUTHS ======================= -->
+<section class="section" id="truths">
+  <div class="section-head reveal">
+    <div class="kicker">01 — Two forms of truth</div>
+    <h2>The model estimates.<br>The market discovers.<br><span class="accent">The difference is the signal.</span></h2>
+  </div>
+  <div class="truths-grid">
+    <div class="truth-card reveal">
+      <div class="truth-label model">Model truth</div>
+      <p>What an athlete may be worth given everything the system knew at that moment — a fair value built from bounded, inspectable factors, stamped with a model version and an as-of time.</p>
+    </div>
+    <div class="truth-card reveal">
+      <div class="truth-label market">Market truth</div>
+      <p>What participants are actually willing to pay. A live order book with real mechanics — market and limit orders, shorts with margin, a tape — running on paper cash.</p>
+    </div>
+    <div class="truth-card accent-card reveal">
+      <div class="truth-label">Divergence</div>
+      <p>When price drifts from fair value, that gap is information. Not a bug to hide — a question to investigate. Star Trade surfaces it in plain language on every athlete.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= THE LOOP ======================= -->
+<section class="section section-tight" id="loop">
+  <div class="section-head reveal">
+    <div class="kicker">02 — The core loop</div>
+    <h2>An engine, not a marketplace<br>with an algorithm bolted on.</h2>
+    <p class="section-sub">Every stage produces versioned, immutable artifacts. Ask the system what it knew last Tuesday at 7:42pm — and why it believed it — and it can answer.</p>
+  </div>
+  <div class="loop-flow reveal">
+    <div class="loop-step"><b>1</b><span>Sports data</span></div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step"><b>2</b><span>Athlete intelligence</span></div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step hot-step"><b>3</b><span>Fair value + confidence</span></div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step"><b>4</b><span>News / events</span></div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step"><b>5</b><span>Sentiment landscape</span></div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step"><b>6</b><span>Trader action</span></div>
+    <div class="loop-arrow">→</div>
+    <div class="loop-step hot-step"><b>7</b><span>Market price</span></div>
+    <div class="loop-arrow loop-return">↺</div>
+    <div class="loop-step"><b>8</b><span>New information</span></div>
+  </div>
+</section>
+
+<!-- ======================= THE FORMULA ======================= -->
+<section class="section" id="engine">
+  <div class="section-head reveal">
+    <div class="kicker">03 — Explainable by construction</div>
+    <h2>Fair value you can<br>argue with, factor by factor.</h2>
+    <p class="section-sub">No black box. Every fair value is a transparent product of bounded factors — each one clamped so no single lever can dominate, each one traceable to inputs, news events and a model version.</p>
+  </div>
+  <div class="formula reveal">
+    <span class="f-var">fair_value</span><span class="f-op">=</span>
+    <span class="f-factor">base_value</span><span class="f-op">×</span>
+    <span class="f-factor">performance</span><span class="f-op">×</span>
+    <span class="f-factor">role</span><span class="f-op">×</span>
+    <span class="f-factor">availability</span><span class="f-op">×</span>
+    <span class="f-factor">momentum</span><span class="f-op">×</span>
+    <span class="f-factor">context</span><span class="f-op">×</span>
+    <span class="f-factor">marketability</span><span class="f-op">×</span>
+    <span class="f-factor f-community">community</span>
+  </div>
+  <div class="engine-grid">
+    <div class="engine-card reveal">
+      <h3>Bounded factors</h3>
+      <p>Each factor responds linearly around a neutral 0.5, then hard-clamps. Form can lift a valuation; it cannot hijack it.</p>
+    </div>
+    <div class="engine-card reveal">
+      <h3>Community, capped at ±5%</h3>
+      <p>The crowd is lexicon-scored, author-weighted and bounded — loud enough to colour a valuation, never loud enough to command it.</p>
+    </div>
+    <div class="engine-card reveal">
+      <h3>Confidence, kept honest</h3>
+      <p>Confidence only widens the uncertainty band. It never moves the central number. Thin data means a wider band, not a quieter model.</p>
+    </div>
+    <div class="engine-card reveal">
+      <h3>Point-in-time everything</h3>
+      <p>Snapshots are immutable, queries respect as-of cutoffs, and digests detect nondeterminism. History stays reconstructible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRODUCT ======================= -->
+<section class="section" id="product">
+  <div class="section-head reveal">
+    <div class="kicker">04 — The product</div>
+    <h2>Never a trading terminal.<br>Always a sports story.</h2>
+    <p class="section-sub">The athlete is the emotional and visual centre. Valuation numbers and order tickets come after the story — and full power is one toggle away, never the default.</p>
+  </div>
+  <div class="product-grid">
+    <div class="product-card reveal">
+      <div class="product-num">Discover</div>
+      <h3>Editorial, sports-first home</h3>
+      <p>Athlete stories, hot form and rising attention lead. Prices appear as secondary signals. Market Attention is discussion + news + activity — never raw volume.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-num">Athlete profile</div>
+      <h3>A story in deliberate order</h3>
+      <p>Identity → what's happening now → recent form → community pulse → StarTrade Intelligence → and only then, the trade ticket.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-num">Community</div>
+      <h3>The fan zone, measurable</h3>
+      <p>A lively sports discussion space with reactions, temperature and velocity per athlete. Sentiment scores run quietly in the background — fully auditable, never cosmetic.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-num">Markets</div>
+      <h3>Simple mode first</h3>
+      <p>Buy now / sell now with plain-language divergence. Advanced mode — book, tape, limit orders, time-in-force — sits behind one deliberate toggle.</p>
+    </div>
+    <div class="product-card wide reveal">
+      <div class="product-num">Rivalries</div>
+      <h3>Athlete-vs-athlete pairs</h3>
+      <p>Currency-pair mechanics for sport. GIANNIS/SHAI, WEMBY/CHET, AMEN/AUSAR: each pair is its own order book whose fair value is the ratio of the two athletes' model fair values — so news, form and sentiment on either side move the pair. The UI leads with both athletes' identities, always.</p>
+      <div class="pair-strip">
+        <div class="pair-chip"><span>GIANNIS / SHAI</span><b class="mono">105.27</b></div>
+        <div class="pair-chip"><span>WEMBY / CHET</span><b class="mono">103.80</b></div>
+        <div class="pair-chip"><span>AMEN / AUSAR</span><b class="mono">174.55</b></div>
+        <div class="pair-chip"><span>LEBRON / CURRY</span><b class="mono">98.42</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= NUMBERS ======================= -->
+<section class="section section-tight" id="numbers">
+  <div class="numbers-grid reveal">
+    <div class="num"><strong data-count="6572">0</strong><span>real NBA games ingested</span></div>
+    <div class="num"><strong data-count="32907">0</strong><span>career stat lines</span></div>
+    <div class="num"><strong data-count="5">0</strong><span>seasons of box scores</span></div>
+    <div class="num"><strong data-count="8">0</strong><span>rivalry markets live</span></div>
+    <div class="num"><strong>±5%</strong><span>community hard cap</span></div>
+    <div class="num"><strong>v1.1.0</strong><span>published model version</span></div>
+  </div>
+</section>
+
+<!-- ======================= ROADMAP ======================= -->
+<section class="section" id="roadmap">
+  <div class="section-head reveal">
+    <div class="kicker">05 — Sequenced expansion</div>
+    <h2>Grow the map.<br>Never dilute the identity.</h2>
+  </div>
+  <div class="roadmap">
+    <div class="phase active reveal">
+      <div class="phase-tag">Phase 1 · Now</div>
+      <h3>NBA excellence + pairs</h3>
+      <p>The full NBA experience with head-to-head rivalry markets — built, live and trading in the demo environment today.</p>
+      <div class="phase-status">Shipped in demo</div>
+    </div>
+    <div class="phase reveal">
+      <div class="phase-tag">Phase 2 · Next</div>
+      <h3>A second major sport</h3>
+      <p>One more league — Premier League or NFL — to prove multi-sport data quality, community coherence and navigation. One sport at a time, only when Phase 1 feels excellent.</p>
+      <div class="phase-status">Gated on quality</div>
+    </div>
+    <div class="phase reveal">
+      <div class="phase-tag">Phase 3 · Later</div>
+      <h3>A separated culture zone</h3>
+      <p>Select cultural figures in a visually distinct, lower-visibility zone. An experiment — never the new centre of gravity, never "Robinhood for celebrities."</p>
+      <div class="phase-status">Deliberately distant</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CREED ======================= -->
+<section class="creed">
+  <blockquote class="reveal">
+    <span>Data informs.</span> <span>The model explains.</span> <span>The community debates.</span> <span>The market discovers.</span> <span class="accent">The ledger records.</span>
+  </blockquote>
+</section>
+
+<!-- ======================= CTA / FOOTER ======================= -->
+<footer class="footer" id="contact">
+  <div class="footer-cta reveal">
+    <h2>See the engine run.</h2>
+    <p>The demo environment is live: real NBA data, eight rivalry markets, a community with a measurable pulse — all on paper cash. We'll walk you through it in twenty minutes.</p>
+    <a class="btn btn-large" href="mailto:hello@startrade.app?subject=Star%20Trade%20demo%20request">Request the live demo</a>
+  </div>
+  <div class="footer-bar">
+    <div class="nav-brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5l3.6 8.2 8.9 1-6.6 6 1.8 8.8L16 22l-7.7 4.5 1.8-8.8-6.6-6 8.9-1z" fill="none" stroke="#FF7A1A" stroke-width="2" stroke-linejoin="round"/><path d="M7 24l6-6 4 3 8-9" fill="none" stroke="#FF7A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>STAR&nbsp;TRADE</span>
+    </div>
+    <p class="fineprint">Paper trading only — no real money anywhere in the system. Demo environment runs on synthetic accounts and real NBA data. © 2026 Star Trade.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
